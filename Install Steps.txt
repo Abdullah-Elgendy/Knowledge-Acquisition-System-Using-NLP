@@ -1,0 +1,52 @@
+
+                       Open CMD
+
+-----------------------------------------------------------------------------------------------------------
+
+ [create virtual environment with anaconda with python version 3.8:]
+                        |
+                        |
+                        |
+                        V
+    conda create -n scispacyenv python=3.8 ipykernel
+
+-----------------------------------------------------------------------------------------------------------
+
+           [activate the virtual env:]
+                        |
+                        |
+                        |
+                        V
+                activate scispacyenv
+
+-----------------------------------------------------------------------------------------------------------
+
+   [install the packages through the command prompt:]
+                        |
+                        |
+                        |
+                        V
+
+          python -m pip install scispacy
+                        |
+                        |
+                        |
+                        V
+      python -m spacy download en_core_web_sm
+                        |
+                        |
+                        |
+                        V
+pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.1/en_ner_bc5cdr_md-0.5.1.tar.gz
+                        |
+                        |
+                        |
+                        V
+                 pip install pandas
+                        |
+                        |
+                        |
+                        V
+                pip install pyquery==1.4.0
+
+-----------------------------------------------------------------------------------------------------------

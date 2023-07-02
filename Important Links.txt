@@ -1,0 +1,21 @@
+SpaCy models:
+https://github.com/explosion/spacy-models
+
+-----------------------------------------------------------------------------------------------------------
+
+Scispacy models:
+https://allenai.github.io/scispacy/
+
+-----------------------------------------------------------------------------------------------------------
+
+SpaCy cheat sheet:
+https://www.datacamp.com/cheat-sheet/spacy-cheat-sheet-advanced-nlp-in-python
+
+-----------------------------------------------------------------------------------------------------------
+
+SpaCy information extraction examples:
+https://github.com/abhijithrajan/Information-Extraction-using-Python-and-spaCy/blob/master/Information-Extraction-using-Python-and-spaCy.ipynb
+
+https://www.kaggle.com/code/samarthagarwal23/information-extraction-from-spacy/notebook#With-lot-of-feedback-data-(social-media,-survery,-reviews,-etc),-teams-want-to-know-what-are-the-key-things-people-are-talking-about
+
+
