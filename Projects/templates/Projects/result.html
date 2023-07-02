@@ -1,0 +1,48 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom Select Box Dropdown Menu</title>
+  <link rel="stylesheet" type="text/css" href="{%static 'Projects/css/styles.css'%}">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <style>
+    .container {
+      height: 500px;
+      position: relative;
+    }
+    
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    </style>
+</head>
+<body>
+    <div class="navbar" style="padding-bottom: 7cm; padding-left: 5cm; text-align: center;">
+        <div class="icon">
+            <h2 class="logo">Health </h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{% url 'userhome' %}">HOME</a></li>
+                <li><a href="{% url 'myProjects' %}">My Projects</a></li>
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+            <p style="position: relative; font-size: large; color: aliceblue; top: 5cm;">from what you selected it seems that you have {{result}} with {{perc}}%, please consult a professional doctor</p>
+            <div class="container">
+              <div class="vertical-center">
+                <button class="bt2" style=" left: 3cm;"><a href="{%url 'userhome'%}">Go Back</a></button>
+              </div>
+            </div>
+            
+        </div>
+        
+    </div> 
+<script type="text/javascript" src={%static 'Projects/js/scripts.js'%}></script>
+</body>
+</html>

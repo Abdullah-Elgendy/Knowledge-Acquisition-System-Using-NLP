@@ -1,0 +1,59 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Health</title>
+    <link rel="stylesheet" href={%static 'Projects/css/style reasoning.css'%}>
+    <script src={% static 'Projects/js/style reasoning.js' %} > </script> 
+</head>
+<body>
+    <!-- ----------------------------------botton--------------------- -->
+        <!-- <a download href="Folder.csv"></a>
+        <a download href="Folder.xml"></a>
+        <button class="btn btn1">download file csv</button>
+        <button class="btn btn2">download file xml</button> -->
+      <!-- ----------------------------------------------------------------------------------------- -->
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Health </h2>
+            </div>
+<!-- ---------------------------------------nav-------------------------------- -->
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'userhome' %}">HOME</a></li>
+                    <li><a href="mailto:yousefsalem2333@gmail.com">CONTACT</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="{% url 'login' %}">Logout</a></li>
+                </ul>
+            </div>
+<!-- ----------------------------------------search---------------------------- -->
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btnn">Search</button></a>
+            </div>
+        </div> 
+        <!-- -------------------------text---------------------------------- -->
+        <div class="content">
+            
+            <h1>your<br><span>Health</span><br>Condition</h1>
+            <p class="par">You can know your health status through our website <br> that contains 
+                <br> Ai</p>
+                <form action="" method="POST" enctype="multipart/form-data">
+                   {%csrf_token%}
+                   {{form.file|add_class:"btnr"}}
+                <div style = "position:relative; top:15px;">
+                   <input type="submit" value="Upload" class="btn"/>
+                </div>
+                   
+                </form>
+                
+            </div>
+        </div>
+        
+
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

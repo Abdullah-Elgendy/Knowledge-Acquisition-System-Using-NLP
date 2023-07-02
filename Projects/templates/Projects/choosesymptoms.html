@@ -1,0 +1,80 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom Select Box Dropdown Menu</title>
+  <link rel="stylesheet" type="text/css" href="{%static 'Projects/css/styles.css'%}">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <style>
+    .container {
+      height: 500px;
+      position: relative;
+    }
+    
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    </style>
+</head>
+<body>
+    <div class="navbar" style="padding-bottom: 7cm; padding-left: 5cm; text-align: center;">
+        <div class="icon">
+            <h2 class="logo">Health </h2>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="{% url 'userhome' %}">HOME</a></li>
+            <li><a href="{% url 'myProjects' %}">My Projects</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+          </ul>
+        </div>
+    </div> 
+
+<div>
+<form action="" method="POST">
+  {%csrf_token%}
+<div class="wrapper">
+  <div class="select_wrap">
+    <ul class="default_option">
+      <li>
+        <div class="option">
+          <p>
+            <span class="count"> 0
+            </span>
+            <span class="text"> Select Symptoms
+            </span>
+          </p>
+          <span class="icon">
+            <ion-icon class="i" name="chevron-down-outline"></ion-icon>
+          </span>
+        </div>
+      </li>
+    </ul>
+    <ul class="select_ul">
+      {%for x in list%}
+      <li>
+        <div class="option">
+          <input type="checkbox" name="checks[]" value="{{x}}" class="input" id="cb1">
+          <span class="checkmark"></span>
+          <span class="text">{{x}}</span>
+        </div>
+      </li>
+      {%endfor%}
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="vertical-center">
+  <input type="submit" value="Submit" class="bt2"/>
+  </div>
+</div>
+</form>
+<script type="text/javascript" src={%static 'Projects/js/scripts.js'%}></script>
+</body>
+</html>

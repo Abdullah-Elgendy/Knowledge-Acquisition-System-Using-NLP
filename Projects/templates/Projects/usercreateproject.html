@@ -1,0 +1,82 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>profile user</title>
+  <link rel="stylesheet" href={%static 'Projects/css/styles user creat project.css'%}>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Health</h2>
+        <ul>
+            <!-- ------------------------------------------- -->
+            <div class="profile-pic-div">
+                <img src="" id="photo">
+                <input type="file" id="file">
+                <label for="file" id="uploadBtn"> Photo</label>
+            </div>
+        <span class="name"> Name: <br> ID:</span>
+            <!-- --------------------------------------------- -->
+            <li><a href="{% url 'userhome' %}"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="{% url 'profile' %}"><i class="fas fa-home"></i>Profile</a></li>
+            <li><a href="{% url 'createProject' %}"><i class="fas fa-user"></i>Creat New Project</a></li>
+            <li><a href="{% url 'myProjects' %}"><i class="fas fa-user"></i>My Projects</a></li>
+        </ul> 
+        
+    </div>
+</div>
+
+<!-- ==================================================== -->
+<div class="container">
+    <span class="big-circle"></span>
+    <img src="" class="square" alt="" />
+    <div class="form">
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <div id="projectData">
+        <form action="" method="POST">
+          {%csrf_token%}
+          <h3 class="title">Create Project</h3>
+          <h5 class="title"> Title</h5>
+          <div class="input-container">
+            <!--input type="text"  name="name" class="input"-->
+            {{form.Title|add_class:"input"}}
+          </div>
+          <div class="input-container textarea">
+            <h1 class="title"> Description</h1>
+            {{form.Description|add_class:"input"}}
+          </div>
+          <div class="input-container">
+            <h5 class="title"> First Url</h5>
+            {{form.Url_1|add_class:"input"}}
+          </div>
+          <div class="input-container">
+            <h5 class="title"> Second Url</h5>
+            {{form.Url_2|add_class:"input"}}
+          </div>
+          <div class="input-container">
+            <h5 class="title"> Third Url</h5>
+            {{form.Url_3|add_class:"input"}}
+          </div>
+          <div class="input-container">
+            <h5 class="title"> Fourth Url</h5>
+            {{form.Url_4|add_class:"input"}}
+          </div>
+          <input type="submit" value="Submit" class="btn"/>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- <script src="user style user create project/styles user creat project.js"></script> -->
+</body>
+</html>

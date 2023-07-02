@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href={%static 'Projects/css/user style my project.css'%}>
+    
+</head>
+<body>
+  
+  <div class="wrapper">
+
+    <div class="sidebar">
+      
+        <h2>Health</h2>
+        <ul>
+          <div class="profile-pic-div">
+                <img src="" id="photo">
+                <input type="file" id="file">
+                <label for="file" id="uploadBtn"> Photo</label>
+          </div>
+            <span class="name"> Name: <br> ID:</span>
+            <li><a href="{% url 'userhome' %}"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="{% url 'profile' %}"><i class="fas fa-home"></i>Profile</a></li>
+            <li><a href="{% url 'createProject' %}"><i class="fas fa-user"></i>Creat New Project</a></li>
+            <li><a href="{% url 'myProjects' %}"><i class="fas fa-user"></i>My Projects</a></li>
+        </ul> 
+    
+    </div>
+    
+</div>
+
+<!-- hero -->
+<header class="hero">
+    <div class="banner">
+      <h1>my Profile</h1>
+      <button class="btn modal-btn">Edit Profile </button>
+     </div>
+  </header>
+  <!-- modal -->
+  <div class="modal-overlay">
+    <div class="modal-container">
+      <input type="text" value="First name:" for="virus" class="id-pro"></input>
+      <input type="text" value="Last name:"  for="virus" class="id-pro"></input>
+      <input type="email" value="email:"  for="virus" class="id-pro"></input>
+      <input type="tel" name="tel" value="phone number:" for="virus" class="id-pro" pattern="[0-9]{4}-[0-9]{3}" required></input> 
+      <button type="email" value="ID:"  for="virus" class="id-pro"></button>
+
+      <button for="virus" class="bt2">Save</button> 
+
+      
+      <button class="close-btn">x</button>
+    </div>
+  </div>
+  <!-- javascript -->
+  <script src={% static "Projects/js/user style my project.js" %}></script>
+</body>
+</html>

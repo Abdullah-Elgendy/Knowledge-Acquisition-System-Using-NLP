@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href={%static 'Projects/css/user style my project.css'%}>
+    
+  
+</head>
+<body>
+  
+  <div class="wrapper">
+
+    <div class="sidebar">
+      
+        <h2>Health</h2>
+        <ul>
+          <div class="profile-pic-div">
+                <img src="" id="photo">
+                <input type="file" id="file">
+                <label for="file" id="uploadBtn"> Photo</label>
+          </div>
+            <span class="name"> Name: <br> ID:</span>
+            <li><a href="{% url 'userhome' %}"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="{% url 'profile' %}"><i class="fas fa-home"></i>Profile</a></li>
+            <li><a href="{% url 'createProject' %}"><i class="fas fa-user"></i>Creat New Project</a></li>
+            <li><a href="{% url 'myProjects' %}"><i class="fas fa-user"></i>My Projects</a></li>
+        </ul> 
+    
+    </div>
+    
+</div>
+
+<!-- hero -->
+<header class="hero">
+  <div class="banner">
+    <h1>my Project</h1>
+    <button class="btn modal-btn">{{project.Title}}</button>
+
+   </div>
+</header>
+<!-- modal -->
+<div class="modal-overlay">
+  <div class="modal-container">
+    <label dir="ltr" for="virus" class="id-pro"> user ID:{{request.user.id}}</label>
+    <label dir="ltr" for="virus" class="id-pro"> project ID:{{project.id}}</label>
+
+              <a href="{%url 'createxml'%}" ><button for="virus" class="bt"> Download XML </button></a>
+              <a href="{%url 'reasoning'%}" ><button for="virus" class="bt"> REASONING </button></a>
+              <!-- <button for="virus" class="bt2">reasoning</button> -->
+
+    
+    <button class="close-btn">x</button>
+  </div>
+</div>
+
+
+
+
+
+  <!-- javascript -->
+  <script src={% static 'Projects/js/user style my project.js'%} ></script> 
+</body>
+</html>
