@@ -4,5 +4,6 @@ This is a repository for our final graduation project, it uses NLP to extract di
 To run the local server using django:
 
 - create a virtual environment
+- activate the virtual environment
 - install the required libraries in "requirements.txt"
-- activate the virtual environment and run the django server
+- run the django server
