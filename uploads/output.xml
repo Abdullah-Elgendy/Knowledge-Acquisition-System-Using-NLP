@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="windows-1256"?>
+<Root><Inference Name="differentiation_model"><Cluster Name="differentiation_model">
+<Rule Name="r1" game="symptoms of COVID‑19"><Tuple Cpt="member" Prop="Symptoms" Val="fatigue" /><Tuple Cpt="member" Prop="Symptoms" Val="breathing difficulties" /><Tuple Cpt="member" Prop="Symptoms" Val="loss of smell and taste" /></Rule>
+<Rule Name="r1" game="Symptoms of stroke"><Tuple Cpt="member" Prop="Symptoms" Val="chest pain" /><Tuple Cpt="member" Prop="Symptoms" Val="palpitations" /><Tuple Cpt="member" Prop="Symptoms" Val="loss of senseation" /></Rule>
+<Rule Name="r1" game="Symptoms of measles"><Tuple Cpt="member" Prop="Symptoms" Val="watery rash" /><Tuple Cpt="member" Prop="Symptoms" Val="blindness" /><Tuple Cpt="member" Prop="Symptoms" Val="dehydration" /></Rule>
+</Cluster></Inference></Root>
