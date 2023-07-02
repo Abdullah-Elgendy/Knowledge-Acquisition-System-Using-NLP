@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Custom Select Box Dropdown Menu</title>
+    <link rel="stylesheet" href="{%static 'Homepage/css/style user home.css'%}">
+    
+</head>
+<body>
+
+ 
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Health </h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'userhome' %}">HOME</a></li>
+                    <li><a href="{% url 'createProject' %}">Create Project</a></li>
+                    <li><a href="{% url 'myProjects' %}">My Projects</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+
+                </ul>
+            </div>
+
+            <div class="search" style ="position:relative; left:80px; top:2px;">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+
+        </div> 
+        <div class="content">
+            <h1>your<br><span>Health</span> <br>Condition</h1>
+            <p class="par">How to use: <br> 1- Login or create an account  
+                <br> 2- Create a project by providing 4 URLS containing medical text
+                <br> 3- Go to your project page and download the XML file containing the extracted knowledge
+                <br> 4- review and modify the file then go to the reasoning page to upload the file</p>
+            </form>
+
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- <h1>Upload Photo Like Facebook Profile DP</h1> -->
+
+    <span class="name">Name:{{request.user}} <br> ID:{{request.user.id}}</span>
+
+    <div class="profile-pic-div">
+        <img src="" id="photo">
+        <input type="file" id="file">
+        <label for="file" id="uploadBtn"> Photo</label>
+    </div>
+
+    <script src={% static "Homepage/js/style user home.js" %}></script>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
+
+
+
